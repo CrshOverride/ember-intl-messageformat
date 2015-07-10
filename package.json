@@ -1,7 +1,7 @@
 {
   "name": "ember-intl-messageformat",
-  "version": "0.0.0",
-  "description": "The default blueprint for ember-cli addons.",
+  "version": "0.0.1",
+  "description": "A tiny wrapper around intl-messageformat to allow for ES6 importing intl-messageformat.",
   "directories": {
     "doc": "doc",
     "test": "tests"
@@ -29,16 +29,20 @@
     "ember-cli-qunit": "0.3.13",
     "ember-cli-uglify": "^1.0.1",
     "ember-data": "1.0.0-beta.18",
+    "ember-disable-prototype-extensions": "^1.0.0",
     "ember-disable-proxy-controllers": "^1.0.0",
     "ember-export-application-global": "^1.0.2",
-    "ember-disable-prototype-extensions": "^1.0.0",
+    "ember-intl-messageformat-parser": "1.1.1",
     "ember-try": "0.0.6"
   },
   "keywords": [
     "ember-addon"
   ],
   "dependencies": {
-    "ember-cli-babel": "^5.0.0"
+    "broccoli-merge-trees": "^0.2.1",
+    "ember-cli-babel": "^5.0.0",
+    "ember-intl-messageformat-parser": "^1.1.0",
+    "intl-messageformat": "^1.1.0"
   },
   "ember-addon": {
     "configPath": "tests/dummy/config"

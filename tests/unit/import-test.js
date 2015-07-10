@@ -3,8 +3,8 @@ import { module, test } from 'qunit';
 
 module('Unit | MessageFormat exports');
 
-test('intl-messageformat exports a single module', function(assert) {
-  assert.ok(IntlMessageFormat, 'message-format is exported');
+test('intl-messageformat exports a constructor', function(assert) {
+  assert.ok(IntlMessageFormat, 'IntlMessageFormat exports constructor');
 });
 
 test('intl-messageformat exports a single module', function(assert) {

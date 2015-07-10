@@ -3,25 +3,17 @@
 
 var path = require('path');
 var mergeTrees = require('broccoli-merge-trees');
+var Funnel = require('broccoli-funnel');
 
-var packageName = 'ember-intl-messageformat';
+var messageFormatPath = path.dirname(require.resolve('intl-messageformat'));
 
 module.exports = {
   name: 'intl-messageformat',
 
-  included: function(app) {
-    this._super.included.apply(this, arguments);
-    this.app = app;
-  },
-
   treeForAddon: function(tree) {
-    var root = path.join(this.project.root, 'node_modules', 'ember-intl-messageformat');
+    var messageFormatParserTree = new Funnel(path.join(messageFormatPath, 'src'));
 
-    if (this.app && this.app.project.pkg.name === packageName) {
-      root = path.join(this.project.root);
-    }
-
-    var trees = mergeTrees([this.treeGenerator(path.join(root, 'node_modules', 'intl-messageformat', 'src')), tree], {
+    var trees = mergeTrees([messageFormatParserTree, tree], {
       overwrite: true
     });
 

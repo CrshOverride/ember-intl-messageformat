@@ -1,7 +1,7 @@
 {
   "name": "ember-intl-messageformat",
-  "version": "0.1.0",
-  "description": "A thin ember-addon wrapper around messageformat.",
+  "version": "1.2.0",
+  "description": "A tiny wrapper around intl-messageformat to allow for ES6 importing intl-messageformat.",
   "directories": {
     "doc": "doc",
     "test": "tests"
@@ -11,7 +11,10 @@
     "build": "ember build",
     "test": "ember try:testall"
   },
-  "repository": "https://github.com/jasonmit/ember-intl-messageformat",
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/jasonmit/ember-intl-messageformat.git"
+  },
   "engines": {
     "node": ">= 0.10.0"
   },
